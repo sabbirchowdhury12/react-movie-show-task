@@ -1,10 +1,11 @@
 import React from 'react';
+import ShowSection from './HomeSection/ShowSection';
 
 const Home = () => {
     return (
-        <div>
 
-        </div>
+        <ShowSection />
+
     );
 };
 
