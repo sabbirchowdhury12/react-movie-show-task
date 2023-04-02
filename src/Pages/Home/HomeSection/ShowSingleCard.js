@@ -6,7 +6,7 @@ const ShowSingleCard = ({ show }) => {
     console.log(show.show);
     return (
         <div className='card'>
-            <img src={show.show.image?.medium
+            <img src={show.show.image?.medium ? show.show.image?.medium : 'https://static.tvmaze.com/uploads/images/medium_portrait/155/388118.jpg'
             } alt="" />
             <div className="content">
                 <h3>{show.show.name}</h3>

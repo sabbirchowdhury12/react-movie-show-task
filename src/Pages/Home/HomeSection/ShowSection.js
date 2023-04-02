@@ -16,9 +16,12 @@ const ShowSection = () => {
 
     return (
         <div className='container'>
-            <h2>Chose Your Show</h2>
 
             <div className='cards'>
+                <div className='cards-text'>
+                    <h2>Chose Your Favourite Show</h2>
+                    <p>Most watched movies by days</p>
+                </div>
                 {
                     shows.map(show => <ShowSingleCard show={show} key={show.show.id} />)
                 }

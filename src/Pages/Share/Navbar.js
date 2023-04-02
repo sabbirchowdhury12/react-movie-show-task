@@ -10,7 +10,7 @@ const Navbar = () => {
             <div className="container">
                 <div className="nav-bar">
                     <a href="/" className="brand-name">
-                        Movie Plex
+                        MOVIE-SHOW
                     </a>
                     <button className="button"
                         onClick={() => {

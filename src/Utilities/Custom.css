@@ -8,20 +8,19 @@
     align-items: center;
     position: relative;
     padding: 0.5rem 0rem;
-    color: black;
 }
 
 nav {
-    background-color: #fff;
     box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
 }
 
 
 .brand-name {
     text-decoration: none;
-    color: black;
+    color: #E4D804;
     font-size: 1.3rem;
     margin-left: 1rem;
+    font-weight: bold;
 }
 
 .nav-menu {
@@ -36,12 +35,15 @@ nav {
 .nav-menu li {
     list-style-type: none;
     margin: 0 1rem;
+
 }
 
 .nav-menu li a {
     text-decoration: none;
     display: block;
     width: 100%;
+    color: #fff;
+    font-weight: Bold;
 }
 
 .button {
@@ -65,7 +67,7 @@ nav {
 }
 
 
-/* -----shows-atyle---------- */
+/* -----shows-cards-atyle---------- */
 
 
 .cards {
@@ -74,8 +76,22 @@ nav {
     justify-items: center;
     text-align: center;
     gap: 2rem;
-    background: #000;
     color: white;
+    margin: 50px 0;
+}
+
+.cards .cards-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.cards .cards-text p {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 20px;
+    color: #A3A2A4;
 }
 
 /* .card {
@@ -119,7 +135,12 @@ button {
     outline: 0 solid transparent;
     padding: 8px 18px;
     border: 0;
+    text-align: center;
+    width: 100%;
 }
+
+
+/* -------------booking modal form---------- */
 
 @media screen and (max-width: 992px) {
     .container {
