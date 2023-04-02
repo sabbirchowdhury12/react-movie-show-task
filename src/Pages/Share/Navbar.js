@@ -42,7 +42,7 @@ const Navbar = () => {
                             </li>
 
                             <li>
-                                <Link >Book List</Link>
+                                <Link to='/list'>Book List</Link>
                             </li>
                         </ul>
                     </div>

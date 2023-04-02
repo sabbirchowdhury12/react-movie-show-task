@@ -1,26 +1,59 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { addToDb } from '../Utilities/AddToDB';
 
 
 
 const BookModalFrom = ({ showModal, setShowModal }) => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [movieName, setMovieName] = useState(showModal.name);
+  const [time, setTime] = useState(showModal.schedule.days[0]);
+  // const { name, setName ] = useState('');
 
-  console.log(showModal);
+  const handleBook = (e) => {
+    e.preventDefault();
+    const user = {
+      name,
+      email,
+      movieName,
+      time,
+      id: showModal.id
+
+    };
+    // localStorage.setItem('Users', JSON.stringify(user));
+    addToDb(user);
+    setShowModal(null);
+  };
+
 
   return (
     <ModalContainer>
       <Modal>
         <label onClick={() => setShowModal(false)} className='cross'>X</label>
         <h2>Buy A Ticket For -- <span> {showModal.name}</span></h2>
-        <Form>
+        <Form onSubmit={handleBook}>
+
           <label htmlFor="name">Your Name</label>
-          <Input type="text" id="name" />
+          <Input type="text" id="name" name='name' required
+            onChange={(e) => setName(e.target.value)}
+          />
+
+          <label htmlFor="email">Email</label>
+          <Input type="email" id="email" email='email' required
+            onChange={(e) => setEmail(e.target.value)}
+          />
           <label htmlFor="movie">Movie Name</label>
-          <Input type="text" disabled defaultValue={showModal.name} id="movie" />
+          <Input type="text" disabled defaultValue={showModal.name} name='movie' id="movie"
+
+          />
           <label htmlFor="time">Schedule</label>
-          <Input type="text" id="time" disabled defaultValue={`${showModal.schedule.days[0]} - ${showModal.schedule.time}`} />
+          <Input type="text" id="time" name='time' disabled defaultValue={`${showModal.schedule.days[0]} - ${showModal.schedule.time}`}
+          />
           <label htmlFor="language">Language</label>
-          <Input type="email" id="language" disabled defaultValue={showModal.language} />
+          <Input type="text" id="language" name='language' disabled defaultValue={showModal.language}
+          // onChange={(e) => setName(e.target.value)}
+          />
           <button type="submit">Book</button>
         </Form>
       </Modal>

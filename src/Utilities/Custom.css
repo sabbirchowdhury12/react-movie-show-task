@@ -227,3 +227,65 @@ button {
         grid-template-columns: repeat(1, minmax(auto, 1fr));
     }
 }
+
+
+/* ------ticket--booking-----table----- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f7f7f7;
+    color: black;
+    border-top: 3px solid #ddd;
+    border-bottom: 3px solid #ddd;
+    font-weight: bold;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* increase-----decrease button------ */
+.value-button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 11px 0;
+    background: #000;
+
+}
+
+.value-button:hover {
+    cursor: pointer;
+}
+
+
+
+input#number {
+    text-align: center;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+    width: 20px;
+    height: 40px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
