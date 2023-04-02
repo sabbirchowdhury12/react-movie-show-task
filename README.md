@@ -1,7 +1,7 @@
 ## Movie-Shows-Task-Project
 
 
- [Live Demo](https://github.com/facebook/create-react-app).
+ [Live Demo](https://movie-shows-website.netlify.app/).
 
 
 ### Website Features
@@ -12,13 +12,11 @@
 - You can Book a Show Ticket.
 
 #### Technoligies
-- This a React Js  frontend Website 
+- This a React Js  frontend Website.
 - CSS, Styled-Components for Style.
-- Use local storage for store user Information
-- I used different package of react js.
-- In the backend, it used node js and mongodb.
+- Use local storage for store user Information.
 
-Admin Email: sabbir@chowdhury.com
-password: 123456
+
+
 
 
