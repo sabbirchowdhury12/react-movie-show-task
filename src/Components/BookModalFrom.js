@@ -5,28 +5,27 @@ import styled from 'styled-components';
 
 const BookModalFrom = ({ showModal, setShowModal }) => {
 
-    console.log(showModal);
+  console.log(showModal);
 
-    return (
-        <ModalContainer>
-            <Modal>
-                <label onClick={() => setShowModal(false)} className='cross'>X</label>
-                <h2>Buy A Ticket For -- <span> {showModal.name}</span></h2>
-                <Form>
-                    <label htmlFor="name">Your Name</label>
-                    <Input type="text" id="name" />
-                    <label htmlFor="movie">Movie Name</label>
-                    <Input type="text" disabled defaultValue={showModal.name} id="movie" />
-                    <label htmlFor="time">Schedule</label>
-                    <Input type="text" id="time" disabled defaultValue={`${showModal.schedule.days[0]} - ${showModal.schedule.time}`} />
-                    <label htmlFor="language">Language</label>
-                    <Input type="email" id="language" disabled defaultValue={showModal.language} />
-
-                    <Button type="submit">Book</Button>
-                </Form>
-            </Modal>
-        </ModalContainer>
-    );
+  return (
+    <ModalContainer>
+      <Modal>
+        <label onClick={() => setShowModal(false)} className='cross'>X</label>
+        <h2>Buy A Ticket For -- <span> {showModal.name}</span></h2>
+        <Form>
+          <label htmlFor="name">Your Name</label>
+          <Input type="text" id="name" />
+          <label htmlFor="movie">Movie Name</label>
+          <Input type="text" disabled defaultValue={showModal.name} id="movie" />
+          <label htmlFor="time">Schedule</label>
+          <Input type="text" id="time" disabled defaultValue={`${showModal.schedule.days[0]} - ${showModal.schedule.time}`} />
+          <label htmlFor="language">Language</label>
+          <Input type="email" id="language" disabled defaultValue={showModal.language} />
+          <button type="submit">Book</button>
+        </Form>
+      </Modal>
+    </ModalContainer>
+  );
 };
 
 export default BookModalFrom;
@@ -50,6 +49,7 @@ const Modal = styled.div`
   border-radius: 5px;
   padding: 20px;
   position:relative;
+  color: #000;
   .cross{
     position: absolute;
     font-size: 20px;
@@ -57,6 +57,7 @@ const Modal = styled.div`
     top: 2px;
     font-weight: bold;
   }
+
 `;
 
 const Form = styled.form`
@@ -71,10 +72,3 @@ const Input = styled.input`
   border: 1px solid #ccc;
 `;
 
-const Button = styled.button`
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #4CAF50;
-  color: white;
-  cursor: pointer;
-`;

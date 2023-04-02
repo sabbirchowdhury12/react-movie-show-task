@@ -17,7 +17,7 @@ const ShowDeatails = () => {
                 <h2>{show.name}</h2>
                 <p>{show.summary.replace('<p>', '').replace('<b>', '').replace('</b>', '').replace('</p>', '').replace('</p>', '')}</p>
                 <div className='content'>
-                    <p >{show.averageRuntime} min</p>
+                    <p className='white'>{show.averageRuntime} min</p>
                     <p className='white'>{show.genres[0]}</p>
                     <p className='white'>{show.schedule.days[0]}, {show.schedule.time} </p>
                 </div>
