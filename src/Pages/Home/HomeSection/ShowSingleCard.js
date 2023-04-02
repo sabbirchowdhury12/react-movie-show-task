@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HiOutlineClock, HiOutlineThumbUp } from 'react-icons/hi';
 
 const ShowSingleCard = ({ show }) => {
     console.log(show.show);
@@ -9,17 +10,19 @@ const ShowSingleCard = ({ show }) => {
             } alt="" />
             <div className="content">
                 <h3>{show.show.name}</h3>
-                <p>{show.show.language ? show.show.language : 0}</p>
+                <p className='white'>{show.show.language ? show.show.language : 0}</p>
             </div>
             <div className="content">
-                <p>HD</p>
+                <p className='hd'>HD</p>
                 <div className="content">
-                    <p>{show.show.averageRuntime} min</p>
-                    <HiOutlineClock />
-                    <p>{show.show.rating?.average ? show.show.rating?.average : 0}</p>
+                    <HiOutlineClock className='yellow' />
+                    <p className='white'>{show.show.averageRuntime} min</p>
+                    <HiOutlineThumbUp className='yellow' />
+                    <p className='white'>{show.show.rating?.average ? show.show.rating?.average : 0}</p>
                 </div>
             </div>
-            <Link to={`/show/${show.show.id}`}>See Details</Link>
+            <Link to={`/show/${show.show.id}`} ><button>Deatails</button></Link>
+
         </div>
     );
 };

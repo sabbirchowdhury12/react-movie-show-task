@@ -86,6 +86,39 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 0.5rem;
+
+}
+
+.hd {
+    border: 1px solid #E4D804;
+    padding: 0.2rem;
+    font-weight: bold;
+    color: #E4D804;
+}
+
+.yellow {
+    color: #E4D804;
+    font-size: 1rem;
+}
+
+.white {
+    color: #A3A2A4;
+}
+
+button {
+
+    background: #5E5DF0;
+    border-radius: 999px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 20px;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    border: 0;
 }
 
 @media screen and (max-width: 992px) {
